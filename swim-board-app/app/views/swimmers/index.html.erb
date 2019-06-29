@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Swimmers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Member number</th>
+      <th>Password digest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @swimmers.each do |swimmer| %>
+      <tr>
+        <td><%= swimmer.name %></td>
+        <td><%= swimmer.member_number %></td>
+        <td><%= swimmer.password_digest %></td>
+        <td><%= link_to 'Show', swimmer %></td>
+        <td><%= link_to 'Edit', edit_swimmer_path(swimmer) %></td>
+        <td><%= link_to 'Destroy', swimmer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Swimmer', new_swimmer_path %>
