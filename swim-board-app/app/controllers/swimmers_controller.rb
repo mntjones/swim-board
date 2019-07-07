@@ -69,6 +69,6 @@ class SwimmersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def swimmer_params
-      params.require(:swimmer).permit(:name, :member_number, :password_digest)
+      params.require(:swimmer).permit(:name, :member_number, :password)
     end
 end
