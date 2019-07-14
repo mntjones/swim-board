@@ -1,5 +1,7 @@
 {
   "name": "swim-board-app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "lodash.template": "^4.5.0"
+  }
 }
